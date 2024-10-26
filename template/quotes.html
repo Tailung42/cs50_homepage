@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #0779e4;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #cccccc;
+            font-weight: bold;
+        }
+        .quote-list {
+            margin: 20px 0;
+            padding: 0;
+            list-style: none;
+        }
+        .quote-item {
+            background: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-left: #0779e4 10px solid;
+        }
+        .quote-item h3 {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Quotes Display</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="jokes.html">jokes</a></li>
+                    <li><a href="memes.html">mems</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Number of Quotes: <span id="quote-count"></span></h2>
+        <ul class="quote-list">
+            <li class="quote-item">
+                <h3>"The greatest glory in living lies not in never falling, but in rising every time we fall." - Nelson Mandela</h3>
+            </li>
+            <li class="quote-item">
+                <h3>"The way to get started is to quit talking and begin doing." - Walt Disney</h3>
+            </li>
+            <li class="quote-item">
+                <h3>"Your time is limited, don't waste it living someone else's life." - Steve Jobs</h3>
+            </li>
+            <li class="quote-item">
+                <h3>"If life were predictable it would cease to be life, and be without flavor." - Eleanor Roosevelt</h3>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // JavaScript to count the number of quotes and display it
+        const quotes = document.querySelectorAll('.quote-item');
+        document.getElementById('quote-count').textContent = quotes.length;
+    </script>
+</body>
+</html>
