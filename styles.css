@@ -1,68 +1,118 @@
-*
-{
+/* Reset and base styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,body
-{
-  width: 100%;
-  height: 100%;
-  background-color: #727272;
+body {
+  background-color: #1c2127;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#main
-{
-  background-color: rgb(67, 67, 67);
-  width: 90%; 
-   height: 90%;
-  border-radius: 15px;
+#main {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  padding: 20px;
 }
 
-.child
-{
-  width: 30%;
-  height: 80%;
-  background-color: rgb(247, 85, 31);
-  border-radius: 7px;
-  margin: 10px;
-  color: white;
-  font-size: xx-large;
-  text-decoration: none; /* Remove underline */
-  color: white;
-  position: relative;
+.child {
+  background-color: #282d34;
+  border-radius: 12px;
   overflow: hidden;
-} 
-.child img
-{
-
-    display: block; /* Make sure the image is treated as a block element */
-    width: 100%; /* Make the image fit the width of the parent */
-    max-width: 100%; /* Ensure it doesn't overflow the parent's width */
-    height: auto; /* Maintain the aspect ratio */
-    margin: 0 auto; /* Center the image horizontally */
-    position: relative;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); 
-    
-  }
-
-.child a
-{
-  text-decoration: none; /* Remove underline */
-  color: rgb(255, 255, 255); 
-  margin: 30%;
+  width: 300px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-a:hover {
-  color: rgb(0, 0, 0); /* Optional: Change color on hover */
+.child:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.child a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+}
+
+.child img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #ee4e2e;
+  transition: opacity 0.2s ease;
+}
+
+.child:hover img {
+  opacity: 0.9;
+}
+
+.child h6 {
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #282d34;
+  transition: background-color 0.2s ease;
+}
+
+.child:hover h6 {
+  background-color: #ee4e2e;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c2127;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ee4e2e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5f3f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #main {
+      gap: 20px;
+      padding: 15px;
+  }
+  
+  .child {
+      width: 280px;
+  }
+  
+  .child img {
+      height: 180px;
+  }
+  
+  .child h6 {
+      font-size: 1.1rem;
+      padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .child {
+      width: 100%;
+      max-width: 320px;
+  }
 }
