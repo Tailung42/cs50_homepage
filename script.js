@@ -27,18 +27,16 @@ function getjoke ()
     if (data.type === "twopart") {
       setup.innerHTML = data.setup;
       punchline.innerHTML = data.delivery;
+      document.getElementById('punchline').classList.remove('hidden');
+ 
     }
     else {
 
       setup.innerHTML = data.joke;
+      document.getElementById('punchline').classList.add('hidden');
+
 
     }
   })
   .catch(error => console.error(error));
 }
-
-
-document.addEventListener("DOMContentLoaded",function(){
-document.getElementById('reveal-button').addEventListener('click', function() {
-document.getElementById('punchline').classList.toggle('hidden');});
-});
