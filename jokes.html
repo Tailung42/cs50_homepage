@@ -29,10 +29,14 @@
 
 
   <div id = "main">
-    <h1 id = "setup"></h1>
-    <h1 id = "punchline" ></h1>
-    <button id="reveal-button">?</button>
-  </div>
-  <button class = "next" onclick="getjoke();">&rarr;</button>
+    <div id="container-fluid">
+      <div id="joke-container">
+        <h1 id = "setup"></h1>
+        <h1 id = "punchline" ></h1>
+      </div>
+      <button class="arrow-button" onclick="getjoke()">NEXT<span class="arrow">→</span></button>
+    </div>
+    <!-- <button id="reveal-button">?</button> -->
+</div>
 </body>
 </html>
