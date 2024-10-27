@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quotes - Streaming Site</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
     <nav class="container-fluid nav">
@@ -17,16 +18,20 @@
             </ul>
         </div>
     </nav>
+    
 
-    <div class="container quote-container">
-        <h2>Number of Quotes: <span id="quote-count" class="count-number">1</span></h2>
-        <div class="quote-text">
-            "The greatest glory in living lies not in never falling, but in rising every time we fall." 
-            <br>- Nelson Mandela
-        </div>
-        <div class="text-center">
-            <a href="#" class="arrow">NEXT →</a>
+
+    <div id="main" class="content">
+        <div class="container-fluid">
+            <div id="container quote-container">
+                <h2 id="quote" class="quote-text">Why did the scarecrow win an award?</h2>
+                <h2 id="quotee" class="quote-text">Because he was outstanding in his field!</h2>
+            </div>
+            <div class="text-center">
+                <button  class="arrow" onclick="getquote()">NEXT →</button>
+            </div>
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memes - Streaming Site</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
     <nav class="container-fluid nav">
@@ -18,16 +19,18 @@
             </ul>
         </div>
     </nav>
-
+    
     <div id="main" class="content">
         <div class="meme-container">
             <div class="image-wrapper">
                 <img src="" alt="OOPSIE" id="meme-image" class="meme-img">
             </div>
             <div class="text-center">
-                <a href="#" class="arrow">NEXT →</a>
+                <!-- <a href="#" onclick="getMeme()" class="arrow">NEXT →</a> -->
+                <button  class="arrow" onclick="getmeme()">NEXT →</button>
             </div>
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 </html>

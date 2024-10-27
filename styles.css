@@ -125,10 +125,6 @@ body {
   margin-top: 2rem;
 }
 
-#quote-count {
-  color: #9ca3af;
-  margin-bottom: 1rem;
-}
 
 /* Next button */
 .arrow {
@@ -145,4 +141,8 @@ body {
 
 .arrow:hover {
   background-color: #2563eb;
+}
+
+.hidden {
+  display: none;
 }
