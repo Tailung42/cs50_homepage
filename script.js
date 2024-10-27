@@ -1,5 +1,7 @@
-document.addEventListener("DOMContentLoaded",getjoke());
-document.addEventListener("DOMContentLoaded", getmeme());
+document.addEventListener("DOMContentLoaded",() => {
+  getjoke();
+  getmeme();
+})
 
 
 function getmeme()
