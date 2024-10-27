@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded",() => {
 
 function getmeme()
 {
-  fetch("https://meme-api.com/gimme")
+  fetch("https://api.apileague.com/retrieve-random-meme?api-key=455d9344f1364f71837644c7fd8dcf0b")
   .then(Response => Response.json())
   .then(data => 
-    {let link = data.url;
-      document.querySelector("#meme-image").src = link;
+    {
+      document.querySelector("#meme-image").src = data.url;
     })
   .catch(error => console.error(error));
 
