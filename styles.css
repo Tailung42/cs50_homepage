@@ -11,8 +11,42 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column; /* Changed to column to accommodate navbar */
+}
+
+/* Navigation Styles */
+.navbar {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.navbar-default {
+  background-color: #282d34;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav > li > a:hover {
+  color: #ee4e2e;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  background-color: #ee4e2e;
+  color: #ffffff;
+}
+
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #main {
@@ -23,6 +57,7 @@ body {
   flex-wrap: wrap;
   max-width: 1200px;
   padding: 20px;
+  margin: auto;
 }
 
 .child {
