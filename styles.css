@@ -1,191 +1,148 @@
-/* Reset and base styles
-* {
+/* Base styles */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-} */
-
-body {
-  background-color: #1c2127;
+  background-color: #1a1d24;
   color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column; /* Changed to column to accommodate navbar */
+  font-family: Arial, sans-serif;
 }
 
-/* Navigation Styles */
-.navbar {
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-.navbar-default {
-  background-color: #282d34;
-  border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-default .navbar-brand,
-.navbar-default .navbar-nav > li > a {
-  color: #ffffff;
-  transition: color 0.2s ease;
-}
-
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-nav > li > a:hover {
-  color: #ee4e2e;
-}
-
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:focus,
-.navbar-default .navbar-nav > .active > a:hover {
-  background-color: #ee4e2e;
-  color: #ffffff;
-}
-
+/* Navigation */
 .container-fluid {
+  background-color: #272b33;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #374151;
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-
-/* index styles  */
-#main {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  min-height: 100vh;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  flex-wrap: wrap;     
+.navbar-brand {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
+/* Navigation links */
+.container-fluid ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
 
+.container-fluid ul li a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s;
+}
 
+.container-fluid ul li a:hover {
+  color: #ffffff;
+}
+
+/* Main content */
+#main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Card styles */
 .child {
-  background-color: #282d34;
-  border-radius: 12px;
+  background-color: #272b33;
+  border-radius: 0.75rem;
   overflow: hidden;
-  width: 300px;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
 }
 
 .child:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.child a {
-  text-decoration: none;
-  color: #ffffff;
-  display: block;
+  transform: scale(1.02);
 }
 
 .child img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-bottom: 2px solid #ee4e2e;
-  transition: opacity 0.2s ease;
-}
-
-.child:hover img {
-  opacity: 0.9;
 }
 
 .child h6 {
+  margin: 1rem;
+  color: #ffffff;
+  font-size: 1.1rem;
   text-align: center;
-  padding: 15px;
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background-color: #282d34;
-  transition: background-color 0.2s ease;
 }
 
-.child:hover h6 {
-  background-color: #ee4e2e;
-}
-
-
-/* jokes style  */
-
+/* Jokes page specific */
 #joke-container {
-  background-color: #282d34;
-  border-radius: 12px;
-  padding: 15px;
+  background-color: #272b33;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
 }
 
-.arrow-button {
-    background-color: #e74c3c;  /* Orange-red background */
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+#setup, #punchline {
+  margin: 1rem 0;
+  color: #ffffff;
 }
 
-.arrow {
-    font-size: 20px;
-}
-
-.arrow-button:hover {
-    background-color: #c0392b;  /* Darker shade on hover */
-}
-
-/* meme styles  */
+/* Memes page specific */
 .meme-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  background-color: #272b33;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-top: 2rem;
 }
 
 .image-wrapper {
-  width: 80%;
   max-width: 600px;
-  margin-bottom: x;
+  margin: 0 auto;
 }
 
 #meme-image {
   width: 100%;
   height: auto;
-  display: block;
+  border-radius: 0.5rem;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #main {
-      gap: 20px;
-      padding: 15px;
-  }
-  
-  .child {
-      width: 280px;
-  }
-  
-  .child img {
-      height: 180px;
-  }
-  
-  .child h6 {
-      font-size: 1.1rem;
-      padding: 12px;
-  }
+/* Quotes page specific */
+.container {
+  background-color: #272b33;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-top: 2rem;
 }
 
-@media (max-width: 480px) {
-  .child {
-      width: 100%;
-      max-width: 320px;
-  }
+#quote-count {
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+
+/* Next button */
+.arrow {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.arrow:hover {
+  background-color: #2563eb;
 }

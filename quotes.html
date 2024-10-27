@@ -1,41 +1,32 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes - Streaming Site</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Quotes Display</title>
 </head>
 <body>
-
-    <nav class="navbar navbar-default">
-
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">WebSiteName</a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="jokes.html">jokes</a></li>
-            <li><a href="memes.html">Memes</a></li>
-          </ul>
+    <nav class="container-fluid nav">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">Halka Ramailo</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="memes.html">Memes</a></li>
+                <li><a href="jokes.html">Jokes</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+            </ul>
         </div>
-      </nav>
+    </nav>
 
-    <div class="container">
-        <h2>Number of Quotes: <span id="quote-count"></span></h2>
-        <ul class="quote-list">
-            <li class="quote-item">
-                <h3>"The greatest glory in living lies not in never falling, but in rising every time we fall." - Nelson Mandela</h3>
-            </li>
-            <!-- more goes here  -->
-        </ul>
+    <div class="container quote-container">
+        <h2>Number of Quotes: <span id="quote-count" class="count-number">1</span></h2>
+        <div class="quote-text">
+            "The greatest glory in living lies not in never falling, but in rising every time we fall." 
+            <br>- Nelson Mandela
+        </div>
+        <div class="text-center">
+            <a href="#" class="arrow">NEXT →</a>
+        </div>
     </div>
-
-    <script>
-        // JavaScript to count the number of quotes and display it
-        const quotes = document.querySelectorAll('.quote-item');
-        document.getElementById('quote-count').textContent = quotes.length;
-    </script>
 </body>
 </html>

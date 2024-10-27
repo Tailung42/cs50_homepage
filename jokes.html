@@ -1,41 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jokes</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes - Streaming Site</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav class="container-fluid nav">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">Halka Ramailo</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="memes.html">Memes</a></li>
+                <li><a href="jokes.html">Jokes</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">WebSiteName</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="memes.html">memes </a></li>
-        <li><a href="quotes.html">quotes</a></li>
-        <!-- <li><a href="#">Page 3</a></li> -->
-      </ul>
+    <div id="main" class="content">
+        <div class="container-fluid">
+            <div id="joke-container">
+                <h2 id="setup" class="joke-text">Why did the scarecrow win an award?</h2>
+                <h2 id="punchline" class="joke-text">Because he was outstanding in his field!</h2>
+            </div>
+            <div class="text-center">
+                <a href="#" class="arrow">NEXT →</a>
+            </div>
+        </div>
     </div>
-  </nav>
-
-
-  <div id = "main">
-    <div id="container-fluid">
-      <div id="joke-container">
-        <h1 id = "setup"></h1>
-        <h1 id = "punchline" ></h1>
-      </div>
-      <button class="arrow-button" onclick="getjoke()">NEXT<span class="arrow">→</span></button>
-    </div>
-</div>
 </body>
 </html>

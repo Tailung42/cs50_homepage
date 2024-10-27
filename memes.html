@@ -1,42 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>memes</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
-
-  </head>
-  <body>
-
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memes - Streaming Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="container-fluid nav">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">WebSiteName</a>
+            <a href="#" class="navbar-brand">Halka Ramailo</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="memes.html">Memes</a></li>
+                <li><a href="jokes.html">Jokes</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+            </ul>
         </div>
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="jokes.html">jokes </a></li>
-          <li><a href="quotes.html">quotes</a></li>
-          <!-- <li><a href="#">Page 3</a></li> -->
-        </ul>
-      </div>
     </nav>
 
-
-    <div id="main">
-      <div class="meme-container">
-          <div class="image-wrapper">
-              <img id="meme-image" src="" alt="OOPSIE">
-          </div>
-          <button class="arrow-button" onclick="getmeme()">NEXT<span class="arrow">→</span></button>
+    <div id="main" class="content">
+        <div class="meme-container">
+            <div class="image-wrapper">
+                <img src="" alt="OOPSIE" id="meme-image" class="meme-img">
+            </div>
+            <div class="text-center">
+                <a href="#" class="arrow">NEXT →</a>
+            </div>
         </div>
-  </div>
-
-
+    </div>
 </body>
 </html>
