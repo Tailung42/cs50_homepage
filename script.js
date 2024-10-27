@@ -10,7 +10,7 @@ function getmeme()
   .then(Response => Response.json())
   .then(data => 
     {let link = data.url;
-      document.querySelector("#meme").src = link;
+      document.querySelector("#meme-image").src = link;
     })
   .catch(error => console.error(error));
 
